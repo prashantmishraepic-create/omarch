@@ -1116,6 +1116,19 @@
     </style>
 </head>
 <body>
+    <div style="
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(-30deg);
+font-size: 90px;
+color: rgba(0,0,0,0.04);
+z-index: 9999;
+pointer-events: none;
+white-space: nowrap;
+font-weight: bold;">
+DEMO VERSION
+</div>
     <header id="header">
         <nav>
             <a href="#home" class="logo">OMARCH</a>
@@ -1577,6 +1590,15 @@
     <a href="tel:+918006000926" class="call-float" aria-label="Call Now">📞</a>
 
     <script>
+        document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+        document.addEventListener('keydown', function(e) {
+    if (e.keyCode == 123) {
+        e.preventDefault();
+    }
+});
+
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
         
